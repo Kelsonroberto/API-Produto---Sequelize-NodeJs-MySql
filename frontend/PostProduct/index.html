@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Trabalho com frontend</title>
+  </head>
+  <body>
+    <header id="cabecalho">
+      <h1><u>Cadastro de Produtos</u></h1>
+    </header>
+
+    <main>
+      <form onsubmit="createProduct()">
+        <div>
+          <div class="form-group">
+            <label for="product">Nome do produto:</label>
+            <input type="text" class="form-control" id="product" />
+          </div>
+
+          <div class="form-group">
+            <label for="stock">Quantidade em Estoque:</label>
+            <input type="number" class="form-control" id="stock" />
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Valor Unitário:</label>
+            <input
+              type="text"
+              format="currency"
+              precision="2"
+              class="form-control"
+              id="amount"
+              onkeyup="mascaraMoeda(this, event)">
+          </div>
+          <div id="submit"></div>
+          <button type="submit"><b>Gravar</b></button>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <span>Desenvolvido em sala de aula SENAI GV, Kelson</span>      
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
